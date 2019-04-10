@@ -1,0 +1,22 @@
+{
+  "name": "mini-vue",
+  "version": "0.0.0",
+  "description": "用于学习和理解 Vue 响应式原理",
+  "main": "src/mini-vue.js",
+  "scripts": {
+    "test": "node example/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CS-Tao/mini-vue.git"
+  },
+  "keywords": [
+    "Vue"
+  ],
+  "author": "CS-Tao <whucstao@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CS-Tao/mini-vue/issues"
+  },
+  "homepage": "https://github.com/CS-Tao/mini-vue#readme"
+}
