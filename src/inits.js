@@ -32,17 +32,17 @@ function initState(vm) {
   observe(vm._data)
   Object.keys(vm._computed).forEach((key) => {
     new Watcher(vm, () => {
-      console.log(`更新计算属性: '${key}: ${vm._computed[key].call(vm)}'.`)
+      console.log(`更新计算属性: '${key}': ${vm._computed[key].call(vm)}'.`)
     })
   })
   Object.keys(vm._data).forEach((key) => {
     new Watcher(vm, () => {
-      console.log(`更新视图(data): '${key}: ${vm._data[key]}'.`)
+      console.log(`更新视图(data): '${key}': ${vm._data[key]}'.`)
     })
   })
   Object.keys(vm._computed).forEach((key) => {
     new Watcher(vm, () => {
-      console.log(`更新视图(computed): '${key}: ${vm._computed[key].call(vm)}'.`)
+      console.log(`更新视图(computed): '${key}': ${vm._computed[key].call(vm)}'.`)
     })
   })
 }
