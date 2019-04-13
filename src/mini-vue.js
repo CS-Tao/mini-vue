@@ -1,4 +1,7 @@
-const { lifecycles } = require('./models')
+const {
+  lifecycles
+} = require('./lifecycles')
+
 const {
   resolveOptions,
   initLifecycle,
@@ -6,10 +9,10 @@ const {
   initRender,
   initState,
   callhook
-} = require('./metheds')
+} = require('./inits')
 
 function Vue(options) {
-  if (!this instanceof Vue) {
+  if (!(this instanceof Vue)) {
     console.error('请用 new 操作符初始化对象')
   }
   this._init(options)
@@ -17,6 +20,7 @@ function Vue(options) {
 
 Vue.prototype._init = function(options) {
   const vm = this
+  this._isVue = true
   resolveOptions(vm, options)
   initLifecycle(vm)
   initEvents(vm)
