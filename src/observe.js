@@ -2,7 +2,7 @@ const { Dep } = require('./dep')
 
 function Observe(value) {
   if (!(this instanceof Observe)) {
-    console.error('请用 new 操作符初始化对象')
+    throw Error('请用 new 操作符初始化对象')
   }
   this.defineReactive(value)
 }

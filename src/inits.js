@@ -63,7 +63,7 @@ function proxyVue(vm) {
         return val
       },
       set: function() {
-        console.error('不能修改计算属性的值')
+        throw Error('不能修改计算属性的值')
       }
     })
   })

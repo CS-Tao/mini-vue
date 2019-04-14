@@ -2,7 +2,7 @@ let uid = 0
 
 function Dep() {
   if (!(this instanceof Dep)) {
-    console.error('请用 new 操作符初始化对象')
+    throw Error('请用 new 操作符初始化对象')
   }
   this.id = uid++
   this.subs = []

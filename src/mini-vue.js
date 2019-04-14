@@ -13,7 +13,7 @@ const {
 
 function Vue(options) {
   if (!(this instanceof Vue)) {
-    console.error('请用 new 操作符初始化对象')
+    throw Error('请用 new 操作符初始化对象')
   }
   this._init(options)
 }

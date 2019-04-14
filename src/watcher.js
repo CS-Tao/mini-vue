@@ -2,14 +2,14 @@ const { pushTarget, popTarget } = require('./dep')
 
 function Watcher(vm, func) {
   if (!(this instanceof Watcher)) {
-    console.error('请用 new 操作符初始化对象')
+    throw Error('请用 new 操作符初始化对象')
   }
   this.vm = vm
   this.deps = []
   this.depIds = new Set()
   this.getter = func
   if (!this.getter || typeof this.getter !== 'function') {
-    console.log('Watcher 构造错误')
+    throw Error('Watcher 构造错误')
   }
   this.value = this.get()
 }
