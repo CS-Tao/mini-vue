@@ -16,7 +16,9 @@ function initLifecycle(vm) {
 }
 
 function callhook(vm, hook) {
-
+  if (vm.$options[hook] && Object.prototype.toString.call(vm.$options[hook]) === '[object Function]') {
+    vm.$options[hook].call(vm)
+  }
 }
 
 function initEvents(vm) {
