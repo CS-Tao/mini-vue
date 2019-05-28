@@ -21,6 +21,10 @@ var vm = new Vue({
       return this.a + this.b
     }
   },
+  created() {
+    console.log('Created hook called')
+    this.changeValue(11, 22)
+  },
   methods: {
     changeValue(a, b) {
       if (a !== null && a !== undefined) {
@@ -36,8 +40,6 @@ var vm = new Vue({
     }
   }
 })
-
-vm.changeValue(11, 22)
 ```
 ## 运行测试代码
 
