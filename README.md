@@ -22,7 +22,6 @@ var vm = new Vue({
     }
   },
   created() {
-    console.log('Created hook called')
     this.changeValue(11, 22)
   },
   methods: {
